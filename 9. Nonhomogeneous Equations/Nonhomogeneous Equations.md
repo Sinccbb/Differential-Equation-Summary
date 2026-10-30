@@ -256,7 +256,9 @@ $$y'' - 3y' - 4y = 4t^2 - 1$$
 
 
 
-*(Solusi komplementernya tetap $y_c(t) = A_1 e^{4t} + A_2 e^{-t}$)*.
+Solusi komplementernya tetap
+
+$$y_c(t) = A_{1}e^{4t} + A_{2}e^{-t}$$
 
 **Aturan Main Polinomial:**
 Jika ruas kanan $g(t)$ adalah polinomial derajat $n$, tebakan $Y(t)$ **wajib memuat seluruh suku polinomial lengkap dari derajat $n$ sampai konstanta**, meskipun di soal ada suku yang melompati derajat tertentu (misal: di ruas kanan tidak ada suku $t$, tetapi di tebakan $Y(t)$ suku $t$ tetap harus ditulis):
