@@ -60,69 +60,123 @@ b. Tentukan bentuk tebakan untuk solusi partikular $Y(t)$, lalu hitung nilai koe
 **Jawaban 1a : Solusi komplementer $y_c(t)$**
 
 $$y_c''-3y_c'-4y_c = 0$$
+
 Jika $y_c = Ae^{rt}$, maka kita bisa rubah
+
 $$Ae^{rt}(r^2-3r-4)=0$$
+
 Karena sebelah kiri gak boleh 0, maka
+
 $$(r^2-3r-4)=0$$
+
 $$(r-4)(r+1)=0$$
+
 $$r_{1,2}=\{4,-1\}$$
+
 Sehingga kita dapat
+
 $$y_c(t) = A_1e^{4t} + A_2 e^{-t}$$
 
 **Jawaban 1b : Solusi Partikular**
+
 $$ g(t)=3e^{2t}$$
+
 Lalu cek solusi komplementer
+
 $$y_c(t) = A_1e^{4t} + A_2 e^{-t}$$
+
 Karena $e^{2t}$ tidak ada pada $y(t)$, maka kita bisa langsung membentuk $Y(t)$ yang serupa dengan $g(t)$.
+
 $$Y(t)=Ae^{2t}$$
+
 Lalu turunkan $Y(t)$ sebanyak 2 kali
+
 $$ Y(t) = Ae^{2t}\rightarrow Y'(t)=2Ae^{2t}\rightarrow Y''(t)=4Ae^{2t} $$
+
 Lalu masukkan solusi partikular ini ke persamaan awal
+
 $$y'' - 3y' - 4y = 3e^{2t}$$
+
 $$(4Ae^{2t}) - 3(2Ae^{2t}) - 4(Ae^{2t}) = 3e^{2t}$$
+
 $$4A-6A-4A=3$$
+
 $$ A = -\frac{1}{2} $$
+
 Sehingga 
+
 $$ Y(t)= -\frac{e^{2t}}{2} $$
 
 Nahh, solusi atau $y(t)$ itu sama dengan $y_c(t)+Y(t)$, atau kita bisa tulis
+
 $$ y(t) = y_c(t) + Y(t) $$
+
 $$ y(t) = A_1e^{4t} + A_2 e^{-t} -\frac{e^{2t}}{2} $$
+
 ---
 **Soal 2**
+
 $$y'' - 3y' - 4y = 2\sin(t)$$
 
 **Petunjuk tebakan:** Untuk fungsi sinus atau kosinus, tebakan $Y(t)$ wajib memuat paket lengkap sinus dan kosinus:
 
 $$Y(t) = A\sin(t) + B\cos(t)$$
+
 Untuk solusi komplementer, ini sama seperti soal 1 tadi
+
 $$y_c(t) = A_1e^{4t} + A_2 e^{-t}$$
+
 Lalu selanjutnya ktia bisa mencari solusi partikularnya
 
+
 $$Y(t) = A\sin(t) + B\cos(t)$$
+
 $$Y'(t) = A\cos(t) - B\sin(t)$$
+
 $$Y''(t) = -A\sin(t) - B\cos(t)$$
 
+
 Dan jika kita masukkan ke pers awal kita akan dapat
+
 $$(-A\sin(t) - B\cos(t)) - 3(A\cos(t) - B\sin(t)) - 4(A\sin(t) + B\cos(t)) = 2\sin(t)$$
+
 $$-A\sin(t) - B\cos(t) - 3A\cos(t) + 3B\sin(t) - 4A\sin(t) - 4B\cos(t) = 2\sin(t)$$
+
 Kelompokkan bagian sin dan cos
+
 $$(-5A+ 3B)\sin(t) + (-5B - 3A)\cos(t) = 2\sin(t)$$
+
 Kita bisa buat persamaannya jadi gini
+
 $$(-5A+ 3B)\sin(t) - (5B + 3A)\cos(t) = 2\sin(t) + 0\cos(t)$$
+
 Sehingga kita punya SPLDV
+
 $$(5B + 3A) = 0 \rightarrow B = -A\frac{3}{5} $$
+
 $$(-5A+ 3B) = 2 \rightarrow (-5A+ 3(-A\frac{3}{5})) = 2$$
+
 $$ (-5A - A\frac{9}{5}) = 2 $$
+
 $$ (-A\frac{34}{5}) = 2 $$
+
 $$ A = -\frac{5}{17} $$
+
 Maka 
+
 $$B = \frac{3}{17}$$
+
 Sehingga kita dapet
+
 $$Y(t) = -\frac{5}{17}\sin(t) + \frac{3}{17}\cos(t)$$
+
+
 Yaa tinggal gabungkan aja sama solusi komplementernya ntar jadi
+
 $$ y(t) = y_c(t) + Y(t) $$
+
 $$ y(t) = A_1e^{4t} + A_2 e^{-t} -\frac{5}{17}\sin(t) + \frac{3}{17}\cos(t) $$
+
 
 ---
 
@@ -131,6 +185,7 @@ Sekarang kamu sudah menguasai kasus eksponensial dan kasus trigonometri. Tahap b
 Coba selesaikan soal berikut (ruas kirinya masih sama, jadi $y_c(t) = A_1e^{4t} + A_2e^{-t}$ tetap berlaku):
 
 **Soal 3**
+
 $$y'' - 3y' - 4y = 2e^{-t}$$
 
 
@@ -146,23 +201,41 @@ Solusi Komplementer
 $$ y_c(t) = A_1e^{4t} + A_2 e^{-t}$$
 
 Solusi 
+
 Bandingkan dengan ini
+
 $$g(t)=2e^{-t}$$
+
 Karena ada yang sama, maka kita kalikan tebakan kita dengan $t$
+
 $$Y(t) = Ate^{-t}$$
+
 Baru kita bisa turunkan dua kali untuk mendapat solusi
+
 $$ Y'(t) = Ae^{-t} - Ate^{-t} $$
+
 $$ Y''(t) = -Ae^{-t} -Ae^{-t} + Ate^{-t}=Ate^{-t}-2Ae^{-t} $$
+
 Masukkan ke persamaan awal
+
 $$(Ate^{-t}-2Ae^{-t}) - 3(Ae^{-t} - Ate^{-t}) - 4(Ate^{-t}) = 2e^{-t}$$
+
 Bagi dengan $e^{-t}$
+
 $$(At-2A) - 3(A - At) - 4(At) = 2$$
+
 $$ -5A  = 2 \rightarrow A=-\frac{2}{5}$$
+
 Sehingga kita dapet
+
 $$Y(t) = -\frac{2te^{-t}}{5}$$
+
 Maka,kita dapet final solusinya
+
 $$y(t) = y_c(t) + Y(t)$$
+
 $$y(t) = A_1e^{4t} + A_2 e^{-t} -\frac{2te^{-t}}{5}$$
+
 ---
 Langkahmu membagi kedua ruas langsung dengan $e^{-t}$ itu trik aljabar yang cerdas banget, langsung memangkas keribetan dan menghindari jebakan salah tanda! Penurunan, eliminasi suku $t$, sampai solusi umum yang kamu dapatkan sudah **100% presisi dan rapi**.
 
@@ -204,35 +277,51 @@ $$y_c(t) = A_1 e^{4t} + A_2 e^{-t}$$
 Solusi Partikular, kita mulai dari pangkat tertinggi yaitu 2
 
 $$ Y(t) = At^2+Bt+C $$
+
 Turunkan 2 kali (kenapa yang turun gak 02 (prabowo) aja ya)
+
 $$ Y'(t) = A2t+B $$
+
 $$ Y''(t) = A2 $$
 
 Lalu masukkan ke persamaan awal
+
 $$y'' - 3y' - 4y = 4t^2 - 1$$
+
 $$(A2) - 3(A2t+B) - 4(At^2+Bt+C) = 4t^2 - 1$$
+
 $$A2 -6At-3B - 4At^2-4Bt-4C = 4t^2 - 1$$
+
 Kelompokkan berdasarkan pangkat $t$ nya
+
 $$(-4At^2) + (-6At -4Bt) + (2A  - 3B - 4C) = 4t^2 - 1$$
+
 $$(-4A)t^2 + (-6A -4B)t + (2A - 3B - 4C) = 4t^2 - 1$$
+
 Darisini kita dapet matriks segitiga
+
 $$
 \begin{bmatrix}
 -4 & 0 & 0 \\
 -6 & -4 & 0 \\
 2 & -3 & -4
 \end{bmatrix}
-
 \begin{bmatrix}
-A\\B\\C
+A \\ 
+B \\ 
+C
 \end{bmatrix}
-=
 \begin{bmatrix}
-4\\0\\-1
+4 \\ 
+0 \\ 
+-1
 \end{bmatrix}
 $$
+
 Dan kita dapat
+
 $$ A = -1,\ B=\frac{3}{2},\ C=\frac{11}{8} $$
+
 
 Sehingga
 
@@ -241,6 +330,7 @@ $$Y(t) = -t^2 + \frac{3}{2}t + \frac{11}{8} $$
 Dan solusi akhirnya tinggal dijumlahkan
 
 $$ y(t) = y_c(t) + Y(t)$$
+
 $$ y(t) = A_1 e^{4t} + A_2 e^{-t} -t^2 + \frac{3}{2}t + \frac{11}{8}$$
 
 
